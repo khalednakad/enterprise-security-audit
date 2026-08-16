@@ -389,97 +389,108 @@ Data Center
 ```
 The architecture also considers:
 
-Network Segmentation
-Zero Trust principles
-Identity and Access Management
-Endpoint Security
-Security Operations
-Cloud Security
-AI Security Infrastructure
-Data Protection
-Backup and Recovery
+- Network Segmentation
+- Zero Trust principles
+- Identity and Access Management
+- Endpoint Security
+- Security Operations
+- Cloud Security
+- AI Security Infrastructure
+- Data Protection
+- Backup and Recovery
 
-The diagram represents a logical security architecture and does not necessarily represent every physical traffic path or deployment configuration.
+The diagram represents a **logical security architecture** and does not necessarily represent every physical traffic path or deployment configuration.
 
-Governance and Compliance Scope
+---
+
+## Governance and Compliance Scope
 
 The assessment considers the organization's ability to maintain appropriate security and compliance as it grows.
 
 This includes:
 
-Security governance
-Security policies
-Risk management
-Continuous auditing
-Regulatory requirements
-Legal requirements
-Third-party risk
-Employee security responsibilities
-Security awareness
-Security training
-Security improvement processes
+- Security governance
+- Security policies
+- Risk management
+- Continuous auditing
+- Regulatory requirements
+- Legal requirements
+- Third-party risk
+- Employee security responsibilities
+- Security awareness
+- Security training
+- Security improvement processes
 
 Particular attention is given to the organization's ability to adapt its security maturity as:
 
-Employee numbers increase
-Customer numbers increase
-Services expand
-New technologies are introduced
-AI capabilities evolve
-Operations expand into additional countries
-Regulatory requirements change
-Continuous Security Assessment
+- Employee numbers increase
+- Customer numbers increase
+- Services expand
+- New technologies are introduced
+- AI capabilities evolve
+- Operations expand into additional countries
+- Regulatory requirements change
+
+---
+
+## Continuous Security Assessment
 
 Cybersecurity risk is not considered static.
 
 The organization should continuously reassess:
 
-New vulnerabilities
-Emerging threats
-New attack techniques
-New technologies
-New AI capabilities
-New employees
-New customers
-New services
-New third-party relationships
-New geographic markets
-New legal and regulatory requirements
+- New vulnerabilities
+- Emerging threats
+- New attack techniques
+- New technologies
+- New AI capabilities
+- New employees
+- New customers
+- New services
+- New third-party relationships
+- New geographic markets
+- New legal and regulatory requirements
 
 Continuous auditing, monitoring, training, remediation, and improvement are therefore considered essential components of the organization's long-term security strategy.
 
-Audit Deliverables
+---
+
+## Audit Deliverables
 
 The assessment produces the following primary deliverables:
 
-Asset Inventory
-Risk Assessment
-Security Controls Assessment
-Audit Findings
-Security Recommendations
-Audit Conclusion
-Security Architecture Overview
-Enterprise Network Diagram
-Final Audit Report
+- Asset Inventory
+- Risk Assessment
+- Security Controls Assessment
+- Audit Findings
+- Security Recommendations
+- Audit Conclusion
+- Security Architecture Overview
+- Enterprise Network Diagram
+- Final Audit Report
 
 Supporting project documentation and visual assets are maintained within the appropriate repository directories.
 
-Assessment Limitations
+---
+
+## Assessment Limitations
 
 This assessment is based on the defined simulated VORTEX SECURE enterprise environment and the assumptions documented throughout the project.
 
 The assessment does not constitute:
 
-A legal compliance certification
-An ISO/IEC 27001 certification
-A formal NIST certification
-A production penetration test
-A guarantee that all vulnerabilities have been identified
-A guarantee that cybersecurity risk has been eliminated
+- A legal compliance certification
+- An ISO/IEC 27001 certification
+- A formal NIST certification
+- A production penetration test
+- A guarantee that all vulnerabilities have been identified
+- A guarantee that cybersecurity risk has been eliminated
 
 The assessment provides a structured evaluation of the simulated organization's cybersecurity posture, security controls, risks, and improvement opportunities.
 
-Assessment Disclaimer
+---
+
+## Assessment Disclaimer
 
 VORTEX SECURE is a simulated enterprise environment created for portfolio and educational purposes.
 
@@ -487,4 +498,5 @@ The findings, controls, risks, architecture, assets, and organizational characte
 
 They should not be interpreted as evidence of a real-world security audit, certification, regulatory approval, or penetration test.
 
+The project demonstrates the practical application of cybersecurity audit and risk assessment principles using **NIST Cybersecurity Framework (CSF) 2.0** as its primary assessment framework.
 The project demonstrates the practical application of cybersecurity audit and risk assessment principles using NIST Cybersecurity Framework (CSF) 2.0 as its primary assessment framework.
