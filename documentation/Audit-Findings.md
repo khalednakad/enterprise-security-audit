@@ -4,19 +4,21 @@
 
 The security audit of VORTEX SECURE identified a generally strong security foundation supported by modern cybersecurity technologies, established security controls, continuous auditing activities, and a commitment to regulatory and legal requirements.
 
-However, the assessment also identified several areas where the organization's security maturity requires improvement.
+However, the assessment also identified several areas where the organization's security maturity requires continued improvement.
 
 The most significant areas identified during the assessment include:
 
-- Password policy enforcement
 - Sensitive customer and corporate data protection
 - Protection of intellectual property and AI assets
+- Password policy enforcement
 - Third-party security risk
 - AI model security and manipulation risks
 - Security awareness and employee training
-- Overall security maturity as the organization continues to grow
+- Security maturity as the organization continues to grow
+- Security documentation
+- Security configuration validation
 
-The organization demonstrates an established security foundation; however, security maturity must continue to evolve alongside increases in employees, customers, infrastructure, services, technologies, and AI capabilities.
+The organization demonstrates an established security foundation; however, security maturity must continue to evolve alongside increases in employees, customers, infrastructure, services, technologies, geographic operations, and AI capabilities.
 
 The findings documented in this report represent identified security weaknesses, control gaps, and risk areas within the simulated VORTEX SECURE environment.
 
@@ -26,14 +28,16 @@ The findings documented in this report represent identified security weaknesses,
 
 | Finding ID | Severity | Category | NIST CSF 2.0 Function | Status |
 |---|---|---|---|---|
-| AF-001 | Critical | Sensitive Data Protection | Protect | Open |
-| AF-002 | Critical | Intellectual Property and AI Asset Protection | Protect | Open |
+| AF-001 | Critical | Sensitive Data Protection | Identify / Protect / Detect | Open |
+| AF-002 | Critical | Intellectual Property and AI Asset Protection | Identify / Protect / Detect | Open |
 | AF-003 | High | Password Policy Enforcement | Protect | Open |
 | AF-004 | High | Third-Party Risk Management | Govern | Open |
-| AF-005 | High | Confidential Corporate Information Protection | Protect | Open |
+| AF-005 | High | Confidential Corporate Information Protection | Identify / Protect / Detect | Open |
 | AF-006 | High | Security Maturity and Organizational Growth | Govern | Open |
-| AF-007 | High | AI Model Logic and Manipulation Risk | Protect | Open |
+| AF-007 | High | AI Model Logic and Manipulation Risk | Identify / Protect / Detect / Respond | Open |
 | AF-008 | Medium | Security Awareness and Employee Training | Protect | Open |
+| AF-009 | Low | Security Governance and Documentation | Govern / Identify | Open |
+| AF-010 | Low | Security Configuration Management | Protect / Detect | Open |
 
 ---
 
@@ -45,7 +49,7 @@ The findings documented in this report represent identified security weaknesses,
 
 **Category:** Data Protection
 
-**NIST CSF 2.0 Function:** Protect
+**NIST CSF 2.0 Functions:** Identify / Protect / Detect
 
 **Status:** Open
 
@@ -77,16 +81,18 @@ Potential consequences include:
 
 - Strengthen data classification.
 - Review access permissions to sensitive data.
+- Apply least-privilege principles.
 - Strengthen DLP controls.
+- Encrypt sensitive information at rest and in transit.
 - Monitor sensitive data access continuously.
-- Review encryption controls.
 - Conduct regular access reviews.
-- Implement continuous auditing of sensitive information.
+- Monitor unusual data access and transfer behavior.
+- Perform periodic data protection assessments.
 - Test data protection controls regularly.
 
 ### NIST CSF 2.0 Alignment
 
-This finding primarily relates to the **Protect** function, particularly data security, identity management, access control, and protective technology.
+This finding primarily relates to **Identify, Protect, and Detect**, particularly asset and data identification, data security, identity management, access control, protective technology, and security monitoring.
 
 ---
 
@@ -96,7 +102,7 @@ This finding primarily relates to the **Protect** function, particularly data se
 
 **Category:** Intellectual Property and AI Security
 
-**NIST CSF 2.0 Function:** Protect
+**NIST CSF 2.0 Functions:** Identify / Protect / Detect
 
 **Status:** Open
 
@@ -138,16 +144,19 @@ Potential consequences include:
 - Strengthen access controls for AI infrastructure.
 - Apply least-privilege principles to AI assets.
 - Protect model weights using strong encryption and access controls.
+- Restrict access to AI training datasets.
 - Implement dataset integrity verification.
-- Monitor access to training datasets.
-- Strengthen DLP controls.
-- Perform continuous AI security assessments.
-- Conduct AI red-team exercises.
-- Monitor model and AI infrastructure activity.
+- Protect proprietary source code and intellectual property repositories.
+- Strengthen DLP controls for AI-related assets.
+- Monitor access to models, datasets, and proprietary technologies.
+- Conduct regular AI security assessments.
+- Perform AI red-team exercises.
+- Review AI supply-chain risks.
+- Monitor unauthorized modification of AI assets.
 
 ### NIST CSF 2.0 Alignment
 
-This finding primarily relates to the **Protect** function, including data security, identity management, access control, and protective technology.
+This finding primarily relates to **Identify, Protect, and Detect**, particularly asset identification, data security, access control, protective technology, and monitoring of critical AI and intellectual property assets.
 
 ---
 
@@ -165,9 +174,9 @@ This finding primarily relates to the **Protect** function, including data secur
 
 ### Description
 
-The assessment identified that VORTEX SECURE does not currently enforce a sufficiently strong and comprehensive password policy across the environment.
+The assessment identified that VORTEX SECURE requires stronger and more consistently enforced password-policy controls across the enterprise environment.
 
-Although the organization maintains stronger authentication capabilities such as MFA and identity-based access controls, the lack of sufficiently strict password-policy enforcement creates an avoidable authentication risk.
+Although the organization maintains stronger authentication capabilities such as MFA and identity-based access controls, insufficiently strict password-policy enforcement creates an avoidable authentication risk.
 
 ### Risk
 
@@ -178,16 +187,18 @@ Weak or inconsistently enforced password requirements could increase the likelih
 - Brute-force attacks
 - Credential stuffing
 - Unauthorized account access
+- Privilege abuse
 
 ### Recommended Actions
 
 - Establish and formally enforce a strong password policy.
+- Define appropriate minimum password-length requirements.
 - Prevent password reuse where appropriate.
-- Implement appropriate password length requirements.
 - Monitor authentication failures.
 - Strengthen MFA coverage.
-- Review privileged account authentication requirements.
-- Periodically review authentication policies.
+- Apply stronger authentication requirements to privileged accounts.
+- Review authentication policies periodically.
+- Integrate password and authentication requirements with the organization's broader Zero Trust strategy.
 
 ### NIST CSF 2.0 Alignment
 
@@ -231,18 +242,20 @@ Potential consequences include:
 
 ### Recommended Actions
 
-- Perform periodic third-party security assessments.
-- Apply least-privilege access to third parties.
+- Perform formal security assessments before onboarding high-risk third parties.
+- Conduct periodic third-party security reviews.
+- Apply least-privilege access to external users.
 - Review third-party permissions regularly.
 - Establish stronger contractual security requirements.
-- Monitor third-party activity.
-- Include security requirements in vendor agreements.
+- Include incident notification requirements in vendor agreements.
+- Monitor third-party access and activity.
+- Reassess third parties when their services, systems, or access requirements change.
 - Maintain documented third-party risk assessments.
-- Reassess third parties when their services or access change.
+- Establish clear security responsibilities between VORTEX SECURE and third parties.
 
 ### NIST CSF 2.0 Alignment
 
-This finding primarily relates to **Govern**, particularly organizational context, risk management strategy, and supply-chain risk management.
+This finding primarily relates to **Govern**, particularly organizational context, risk management strategy, policy, oversight, and supply-chain risk management.
 
 ---
 
@@ -252,7 +265,7 @@ This finding primarily relates to **Govern**, particularly organizational contex
 
 **Category:** Data Protection
 
-**NIST CSF 2.0 Function:** Protect
+**NIST CSF 2.0 Functions:** Identify / Protect / Detect
 
 **Status:** Open
 
@@ -260,7 +273,9 @@ This finding primarily relates to **Govern**, particularly organizational contex
 
 The assessment identified a risk of unauthorized exposure of confidential corporate information.
 
-VORTEX SECURE maintains sensitive business information including intellectual property, internal documentation, source code, training datasets, proprietary technologies, and other confidential information.
+VORTEX SECURE maintains sensitive business information including intellectual property, internal documentation, source code, training datasets, proprietary technologies, authentication-related information, and other confidential information.
+
+These assets require continuous protection throughout their lifecycle.
 
 ### Risk
 
@@ -276,20 +291,25 @@ Potential consequences include:
 - Reputational damage
 - Loss of customer trust
 - Legal consequences
+- Business disruption
 
 ### Recommended Actions
 
-- Strengthen data classification.
+- Improve data classification.
+- Identify critical confidential information.
 - Review access permissions regularly.
 - Apply least-privilege principles.
-- Improve DLP monitoring.
-- Strengthen encryption.
-- Monitor access to sensitive repositories.
-- Conduct periodic security reviews.
+- Strengthen DLP monitoring.
+- Encrypt sensitive information.
+- Monitor access to confidential repositories.
+- Review GitHub Enterprise and source-code permissions.
+- Monitor access to proprietary AI datasets and model assets.
+- Conduct periodic confidential-data protection assessments.
+- Apply secure data disposal procedures.
 
 ### NIST CSF 2.0 Alignment
 
-This finding primarily relates to **Protect**, particularly Data Security and Access Control.
+This finding primarily relates to **Identify, Protect, and Detect**, particularly data and asset identification, Data Security, Access Control, and monitoring of sensitive information.
 
 ---
 
@@ -305,13 +325,21 @@ This finding primarily relates to **Protect**, particularly Data Security and Ac
 
 ### Description
 
-The assessment identified that VORTEX SECURE has an established security foundation but does not yet demonstrate the level of security maturity expected for an organization of its size, technological complexity, and growth trajectory.
+The assessment identified that VORTEX SECURE has an established security foundation but requires continued development of security maturity as the organization grows.
 
-The organization performs continuous auditing and maintains multiple security controls; however, security maturity must continue to evolve alongside organizational growth.
+The organization performs continuous auditing and maintains multiple security controls; however, security maturity must continue to evolve alongside growth in employees, customers, infrastructure, services, geographic operations, technologies, and AI capabilities.
 
 ### Risk
 
-If security maturity does not scale with organizational growth, new employees, customers, technologies, services, and geographic operations may increase the organization's overall attack surface and risk exposure.
+If security maturity does not scale with organizational growth, the organization may experience:
+
+- Control gaps
+- Inconsistent security practices
+- Increased attack surface
+- Access-management challenges
+- Governance gaps
+- Compliance challenges
+- Increased operational risk
 
 ### Areas Requiring Continued Improvement
 
@@ -329,18 +357,20 @@ If security maturity does not scale with organizational growth, new employees, c
 ### Recommended Actions
 
 - Establish measurable security maturity objectives.
-- Continuously reassess organizational risk.
-- Review controls as the organization grows.
-- Conduct regular security audits.
-- Increase security awareness training.
-- Strengthen risk management processes.
-- Reassess third-party risks.
-- Continuously evaluate new technologies and AI capabilities.
-- Ensure security governance evolves alongside business growth.
+- Perform regular organizational risk assessments.
+- Reassess security controls as the company grows.
+- Review security policies periodically.
+- Increase security governance oversight.
+- Establish security maturity metrics.
+- Continuously assess the organization's attack surface.
+- Reassess security requirements when new technologies are introduced.
+- Include AI capabilities in future security maturity assessments.
+- Ensure security resources scale with employee and customer growth.
+- Continue continuous auditing and control validation.
 
 ### NIST CSF 2.0 Alignment
 
-This finding primarily relates to the **Govern** function and its emphasis on organizational context, risk management strategy, roles and responsibilities, policy, and oversight.
+This finding primarily relates to **Govern**, particularly organizational context, risk management strategy, roles and responsibilities, policy, oversight, and continuous improvement.
 
 ---
 
@@ -350,7 +380,7 @@ This finding primarily relates to the **Govern** function and its emphasis on or
 
 **Category:** AI Security
 
-**NIST CSF 2.0 Function:** Protect
+**NIST CSF 2.0 Functions:** Identify / Protect / Detect / Respond
 
 **Status:** Open
 
@@ -358,7 +388,7 @@ This finding primarily relates to the **Govern** function and its emphasis on or
 
 The assessment identified risks associated with manipulation or abuse of AI model logic and AI-enabled systems.
 
-VORTEX SECURE operates AI models, AI agents, RAG systems, and related infrastructure. These systems may be exposed to threats that are not adequately addressed by traditional cybersecurity controls alone.
+VORTEX SECURE operates AI models, AI agents, RAG systems, and related infrastructure. These systems introduce security risks that may not be fully addressed by traditional cybersecurity controls alone.
 
 Potential attack scenarios include:
 
@@ -369,26 +399,44 @@ Potential attack scenarios include:
 - AI agent abuse
 - RAG data exposure
 - Unauthorized model interaction
+- Adversarial inputs
 
 ### Risk
 
-Successful manipulation of AI systems could cause unauthorized behavior, disclosure of sensitive information, incorrect outputs, or compromise of AI-enabled business processes.
+Successful manipulation of AI systems could cause unauthorized behavior, disclosure of sensitive information, incorrect outputs, service disruption, or compromise of AI-enabled business processes.
+
+### Business Impact
+
+Potential consequences include:
+
+- Intellectual property loss
+- Sensitive data exposure
+- Unauthorized model behavior
+- Business process disruption
+- Service disruption
+- Reputational damage
+- Customer trust loss
 
 ### Recommended Actions
 
 - Conduct regular AI red-team assessments.
-- Test models against adversarial inputs.
-- Strengthen prompt injection detection.
+- Test models against prompt injection.
+- Perform adversarial testing.
 - Validate training-data integrity.
-- Monitor AI model behavior.
-- Apply strict authentication and authorization to AI APIs.
-- Monitor AI agents and tool usage.
+- Monitor AI model behavior for anomalies.
+- Detect unauthorized model modifications.
+- Strengthen AI API authentication and authorization.
+- Monitor AI agent tool usage.
 - Protect RAG data sources.
-- Perform continuous AI security testing.
+- Test AI agents against abuse scenarios.
+- Monitor model extraction attempts.
+- Conduct periodic AI security assessments.
+- Integrate AI security monitoring with the organization's security operations capabilities.
+- Include AI-specific scenarios in incident response exercises.
 
 ### NIST CSF 2.0 Alignment
 
-This finding primarily relates to **Protect** and also supports **Identify** and **Detect** activities related to AI-related cybersecurity risks.
+This finding relates to **Identify, Protect, Detect, and Respond**, covering identification of AI-related risks, protective controls, monitoring and detection, and incident response capabilities for AI-enabled systems.
 
 ---
 
@@ -406,9 +454,9 @@ This finding primarily relates to **Protect** and also supports **Identify** and
 
 ### Description
 
-The assessment identified insufficient maturity in the organization's security awareness and employee training capabilities.
+The assessment identified an area for continued improvement in the organization's security awareness and employee training capabilities.
 
-Employees are an important component of the organization's security posture, and insufficient awareness may increase the likelihood of successful social engineering, phishing, credential compromise, and accidental data exposure.
+Employees are an important component of the organization's security posture, and insufficient awareness may increase the likelihood of successful social engineering, phishing, credential compromise, accidental data exposure, and delayed incident reporting.
 
 ### Risk
 
@@ -427,27 +475,30 @@ Insufficient employee security awareness may result in:
 - Establish mandatory security awareness training.
 - Conduct regular phishing simulations.
 - Provide role-based security training.
-- Provide AI Security Training.
+- Provide dedicated AI Security Training.
 - Conduct Incident Response Exercises.
-- Provide secure data handling training.
+- Train employees on secure data handling.
+- Provide social engineering awareness training.
 - Train employees on incident reporting procedures.
+- Provide secure development training for technical teams.
+- Provide executive cybersecurity awareness training.
 - Measure training effectiveness.
 
 ### NIST CSF 2.0 Alignment
 
-This finding primarily relates to the **Protect** function, particularly awareness and training.
+This finding primarily relates to **Protect**, particularly awareness and training activities.
 
 ---
 
 ## AF-009 – Security Documentation
 
-Severity: Low
+**Severity:** Low
 
-Category: Security Governance and Documentation
+**Category:** Security Governance and Documentation
 
-NIST CSF 2.0 Function: Govern / Identify
+**NIST CSF 2.0 Functions:** Govern / Identify
 
-Status: Open
+**Status:** Open
 
 ### Description
 
@@ -468,7 +519,7 @@ Important documentation includes:
 
 ### Risk
 
-Outdated or incomplete documentation can reduce operational efficiency and make security assessment, incident response, and recovery more difficult.
+Outdated or incomplete documentation can reduce operational efficiency and make security assessment, incident response, recovery, and governance more difficult.
 
 ### Business Impact
 
@@ -479,6 +530,7 @@ Potential consequences include:
 - Inaccurate risk assessment
 - Delayed recovery activities
 - Increased operational risk
+- Reduced audit readiness
 
 ### Recommended Actions
 
@@ -488,23 +540,25 @@ Potential consequences include:
 - Keep network architecture documentation current.
 - Review security policies and procedures regularly.
 - Maintain current incident response and recovery documentation.
+- Maintain current access control documentation.
+- Update risk registers following significant changes.
 - Preserve appropriate audit evidence.
 
 ### NIST CSF 2.0 Alignment
 
-This finding primarily relates to Govern and Identify, particularly organizational context, governance, asset management, and risk management.
+This finding primarily relates to **Govern and Identify**, particularly organizational context, governance, asset management, risk management, documentation, and oversight.
 
 ---
 
-## AF-010 – Security Configuration Improvements
+## AF-010 – Security Configuration Management
 
-Severity: Low
+**Severity:** Low
 
-Category: Security Configuration Management
+**Category:** Security Configuration Management
 
-NIST CSF 2.0 Function: Protect / Detect
+**NIST CSF 2.0 Functions:** Protect / Detect
 
-Status: Open
+**Status:** Open
 
 ### Description
 
@@ -533,6 +587,7 @@ Potential consequences include:
 - Unauthorized access
 - Detection gaps
 - Increased likelihood of security incidents
+- Inconsistent security enforcement
 
 ### Recommended Actions
 
@@ -543,19 +598,21 @@ Potential consequences include:
 - Validate network security controls.
 - Review SIEM and monitoring configurations.
 - Validate AI infrastructure security configurations.
+- Document identified configuration weaknesses.
 - Track configuration weaknesses through remediation processes.
+- Validate corrective actions after remediation.
 
 ### NIST CSF 2.0 Alignment
 
-This finding primarily relates to Protect and Detect, particularly protective technology, access control, security monitoring, and control validation.
+This finding primarily relates to **Protect and Detect**, particularly protective technology, access control, security monitoring, and validation of security controls.
 
 ---
 
 # Finding Validation
 
-The findings were evaluated through the security audit activities performed throughout the assessment.
+The findings were evaluated through the documented assessment activities performed throughout the simulated audit.
 
-Validation activities included:
+Assessment activities included:
 
 - Documentation Review
 - Security Policy Review
@@ -569,10 +626,12 @@ Validation activities included:
 - Cloud Security Review
 - AI Infrastructure Review
 - Security Service Review
-- Vulnerability Assessment
+- Control and Risk Assessment
 - Compliance Review
 
 The findings represent the results and risk observations of the simulated audit environment.
+
+The assessment should not be interpreted as evidence of a production penetration test, complete vulnerability discovery, or independent certification assessment.
 
 ---
 
@@ -623,7 +682,7 @@ This process ensures that findings are not considered resolved merely because a 
 
 VORTEX SECURE maintains a strong foundational security environment supported by modern security technologies, established security controls, continuous auditing, and a commitment to compliance.
 
-However, the organization does not yet demonstrate the level of security maturity that should be expected from a technology-focused organization of its size and complexity.
+However, the organization requires continued development of security maturity to remain aligned with its size, technological complexity, geographic operations, customer base, infrastructure, services, and AI capabilities.
 
 The most significant areas requiring continued improvement are:
 
@@ -635,10 +694,12 @@ The most significant areas requiring continued improvement are:
 - Security maturity
 - AI model and AI system security
 - Security awareness and employee training
+- Security documentation
+- Security configuration management
 
 The organization has the foundation required to improve its security posture substantially.
 
-The key requirement is to maintain continuous auditing, risk identification, remediation, validation, employee training, and security improvement as the organization grows.
+The key requirement is to maintain continuous auditing, risk identification, remediation, validation, employee training, security monitoring, and security improvement as the organization grows.
 
 ---
 
@@ -648,16 +709,18 @@ The identified findings map to the primary NIST CSF 2.0 Functions as follows:
 
 | Finding | Govern | Identify | Protect | Detect | Respond | Recover |
 |---|---:|---:|---:|---:|---:|---:|
-| AF-001 Sensitive Customer Data Protection |  |  | ✓ | ✓ |  |  |
+| AF-001 Sensitive Customer Data Protection |  | ✓ | ✓ | ✓ |  |  |
 | AF-002 Intellectual Property and AI Asset Protection |  | ✓ | ✓ | ✓ |  |  |
 | AF-003 Password Policy Enforcement |  |  | ✓ |  |  |  |
-| AF-004 Third-Party Risk Management | ✓ | ✓ | ✓ | ✓ |  |  |
+| AF-004 Third-Party Risk Management | ✓ |  |  |  |  |  |
 | AF-005 Confidential Information Protection |  | ✓ | ✓ | ✓ |  |  |
-| AF-006 Security Maturity and Organizational Growth | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| AF-006 Security Maturity and Organizational Growth | ✓ |  |  |  |  |  |
 | AF-007 AI Model Logic and Manipulation Risk |  | ✓ | ✓ | ✓ | ✓ |  |
-| AF-008 Security Awareness and Employee Training |  |  | ✓ |  | ✓ |  |
+| AF-008 Security Awareness and Employee Training |  |  | ✓ |  |  |  |
+| AF-009 Security Documentation | ✓ | ✓ |  |  |  |  |
+| AF-010 Security Configuration Management |  |  | ✓ | ✓ |  |  |
 
-The NIST CSF 2.0 alignment demonstrates that the findings are not isolated technical issues; they represent risks across governance, identification, protection, detection, response, and organizational resilience.
+The NIST CSF 2.0 alignment demonstrates that the findings are not isolated technical issues. They represent risks involving governance, asset and risk identification, protective controls, security monitoring, incident response, and organizational security maturity.
 
 ---
 
@@ -668,3 +731,7 @@ The audit did not identify an organization without security controls. Instead, i
 The most important objective is therefore not simply to implement additional security technologies, but to ensure that existing controls remain effective, continuously tested, properly governed, and capable of scaling with the organization's growth.
 
 VORTEX SECURE should continue applying the **NIST Cybersecurity Framework (CSF) 2.0** as the primary framework for managing cybersecurity risk and improving its security maturity over time.
+
+The findings documented in this report should remain connected to the organization's remediation process, security recommendations, future risk assessments, control reviews, and subsequent audit activities.
+
+Cybersecurity should remain a continuous organizational responsibility that evolves alongside the company's growth, technologies, customers, employees, third-party relationships, and AI capabilities.
