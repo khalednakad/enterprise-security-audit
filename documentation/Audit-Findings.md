@@ -439,6 +439,118 @@ This finding primarily relates to the **Protect** function, particularly awarene
 
 ---
 
+## AF-009 – Security Documentation
+
+Severity: Low
+
+Category: Security Governance and Documentation
+
+NIST CSF 2.0 Function: Govern / Identify
+
+Status: Open
+
+### Description
+
+Security documentation should remain accurate, complete, and synchronized with changes to the organization's architecture, systems, assets, policies, and security controls.
+
+Important documentation includes:
+
+- Asset inventories
+- Network architecture
+- Security policies
+- Security procedures
+- Incident response playbooks
+- Risk registers
+- Access control documentation
+- Business continuity documentation
+- Disaster recovery documentation
+- Audit evidence
+
+### Risk
+
+Outdated or incomplete documentation can reduce operational efficiency and make security assessment, incident response, and recovery more difficult.
+
+### Business Impact
+
+Potential consequences include:
+
+- Reduced security visibility
+- Inefficient incident response
+- Inaccurate risk assessment
+- Delayed recovery activities
+- Increased operational risk
+
+### Recommended Actions
+
+- Review security documentation periodically.
+- Update documentation following significant architectural or organizational changes.
+- Maintain accurate asset inventories.
+- Keep network architecture documentation current.
+- Review security policies and procedures regularly.
+- Maintain current incident response and recovery documentation.
+- Preserve appropriate audit evidence.
+
+### NIST CSF 2.0 Alignment
+
+This finding primarily relates to Govern and Identify, particularly organizational context, governance, asset management, and risk management.
+
+---
+
+## AF-010 – Security Configuration Improvements
+
+Severity: Low
+
+Category: Security Configuration Management
+
+NIST CSF 2.0 Function: Protect / Detect
+
+Status: Open
+
+### Description
+
+Security controls depend on correct configuration and continuous review.
+
+The organization should periodically validate configurations across:
+
+- Firewalls
+- Identity systems
+- Endpoints
+- Cloud infrastructure
+- Network security systems
+- Security monitoring platforms
+- AI infrastructure
+
+### Risk
+
+Configuration weaknesses may create unnecessary exposure or reduce the effectiveness of existing security controls.
+
+### Business Impact
+
+Potential consequences include:
+
+- Increased attack surface
+- Reduced effectiveness of security controls
+- Unauthorized access
+- Detection gaps
+- Increased likelihood of security incidents
+
+### Recommended Actions
+
+- Conduct periodic firewall configuration reviews.
+- Review identity and access configurations.
+- Validate endpoint security configurations.
+- Review cloud security configurations.
+- Validate network security controls.
+- Review SIEM and monitoring configurations.
+- Validate AI infrastructure security configurations.
+- Track configuration weaknesses through remediation processes.
+
+### NIST CSF 2.0 Alignment
+
+This finding primarily relates to Protect and Detect, particularly protective technology, access control, security monitoring, and control validation.
+
+---
+
 # Finding Validation
 
 The findings were evaluated through the security audit activities performed throughout the assessment.
