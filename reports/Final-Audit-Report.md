@@ -359,19 +359,19 @@ The organization demonstrates strong investment in technical security controls.
 
 The network architecture also provides layered protection through:
 
-Internet → ISP Redundancy → DDoS Protection → NGFW → WAF → Load Balancer → DMZ → Internal Network → Data Center
+**Internet → ISP Redundancy → DDoS Protection → NGFW → WAF → Load Balancer → DMZ → Internal Network → Data Center**
 
-### Key Weaknesses
+### Key Improvement Areas
 
-The most significant identified weakness is the lack of sufficiently strict password security policies.
+The most significant protection-related weaknesses identified during the assessment include:
 
-Additional improvement areas include:
-
+- Sensitive customer data protection
+- Confidential data protection
+- Password policy enforcement
+- Access control consistency
+- AI asset protection
 - Security awareness
-- Employee security training
-- Continuous access review
 - Third-party access controls
-- AI-specific security controls
 
 ### NIST CSF 2.0 Function
 
@@ -420,6 +420,7 @@ Detection capabilities should continue evolving with:
 - Insider threats
 - Supply-chain attacks
 - Advanced social engineering
+- Security configuration weaknesses
 
 ### NIST CSF 2.0 Function
 
@@ -517,24 +518,100 @@ Testing should include:
 
 # 15. Key Audit Findings
 
-## Finding 01 — Password Security Policy Maturity
+The assessment identified ten formal findings requiring tracking, remediation, validation, or continued monitoring.
+
+The findings are maintained using the project's formal finding identifiers:
+
+- AF-001
+- AF-002
+- AF-003
+- AF-004
+- AF-005
+- AF-006
+- AF-007
+- AF-008
+- AF-009
+- AF-010
+
+The findings below represent the consolidated audit findings documented in the project's formal findings register.
+
+---
+
+## 15.1 AF-001 — Sensitive Customer Data Exposure
 
 ### Description
 
-The organization does not currently maintain a sufficiently strict password security policy for an enterprise of its size and complexity.
+The assessment identified a risk associated with the protection of sensitive customer information.
+
+Sensitive customer information represents a high-value target and requires strong access control, monitoring, encryption, data classification, and data-loss prevention measures.
 
 ### Risk
 
-Weak password requirements may increase the probability of:
+Insufficient protection of sensitive customer information could result in:
+
+- Unauthorized disclosure
+- Data theft
+- Privacy violations
+- Regulatory consequences
+- Customer trust loss
+- Reputational damage
+
+### Severity
+
+**Critical**
+
+### NIST CSF 2.0 Mapping
+
+**Identify / Protect / Detect**
+
+---
+
+## 15.2 AF-002 — AI Intellectual Property Protection
+
+### Description
+
+VORTEX SECURE maintains high-value AI intellectual property including AI models, model weights, training datasets, and related research.
+
+These assets require dedicated protection because unauthorized access or extraction could result in significant intellectual property loss.
+
+### Risk
+
+Potential risks include:
+
+- Model theft
+- Model extraction
+- Training-data exposure
+- Unauthorized access
+- Intellectual property theft
+- Competitive disadvantage
+
+### Severity
+
+**Critical**
+
+### NIST CSF 2.0 Mapping
+
+**Identify / Protect / Detect**
+
+---
+
+## 15.3 AF-003 — Password Policy
+
+### Description
+
+The organization requires stronger password-policy enforcement and formalization to improve authentication security across enterprise systems.
+
+Although MFA and identity-management controls are established, password security remains an identified area for improvement.
+
+### Risk
+
+Weak or inconsistently enforced password requirements may increase the likelihood of:
 
 - Credential compromise
 - Password attacks
 - Account takeover
+- Unauthorized access
 - Privilege abuse
-
-### Impact
-
-Potential unauthorized access to corporate systems and sensitive resources.
 
 ### Severity
 
@@ -546,25 +623,24 @@ Potential unauthorized access to corporate systems and sensitive resources.
 
 ---
 
-# 16. Finding 02 — Third-Party Trust Risk
+## 15.4 AF-004 — Third-Party Risk Management
 
 ### Description
 
-The organization demonstrates a potential risk associated with excessive trust in certain third-party relationships.
+Third-party relationships introduce additional security and supply-chain risk.
+
+As VORTEX SECURE operates internationally and relies on external providers and partners, third-party security should be continuously assessed and governed.
 
 ### Risk
 
-A compromised or malicious third party could potentially provide an attacker with a path into organizational systems or sensitive information.
+Potential risks include:
 
-### Impact
-
-Potential:
-
-- Data exposure
 - Supply-chain compromise
-- Unauthorized access
+- Unauthorized third-party access
+- Data exposure
+- Weak security controls
 - Operational disruption
-- Reputational damage
+- Increased attack surface
 
 ### Severity
 
@@ -576,80 +652,24 @@ Potential:
 
 ---
 
-# 17. Finding 03 — Security Awareness Maturity
+## 15.5 AF-005 — Confidential Data Exposure
 
 ### Description
 
-Security awareness and employee training require continued improvement to match the organization's size and threat exposure.
+The organization processes confidential information including intellectual property, source code, security information, authentication secrets, AI datasets, and internal business information.
+
+These assets require continuous protection throughout their lifecycle.
 
 ### Risk
 
-Insufficient awareness may increase susceptibility to:
+Insufficient protection could result in:
 
-- Phishing
-- Social engineering
-- Credential theft
-- Insider threats
-- Unsafe handling of sensitive information
-
-### Impact
-
-Potential compromise of organizational systems and information.
-
-### Severity
-
-**Medium-High**
-
-### NIST CSF 2.0 Mapping
-
-**Protect**
-
----
-
-# 18. Finding 04 — Organizational Security Maturity
-
-### Description
-
-The organization's security foundation is strong, but security maturity must continue developing as the company grows.
-
-### Risk
-
-Rapid organizational growth without proportional security maturity may create:
-
-- Control gaps
-- Inconsistent security practices
-- Increased attack surface
-- Access management challenges
-- Compliance gaps
-
-### Severity
-
-**Medium-High**
-
-### NIST CSF 2.0 Mapping
-
-**Govern / Identify**
-
----
-
-# 19. Finding 05 — AI Model Security
-
-### Description
-
-AI systems introduce additional security risks including potential manipulation of model logic, training data, and AI workflows.
-
-### Potential Threats
-
-- Training data poisoning
-- Model manipulation
-- Unauthorized model access
-- Sensitive data exposure
-- AI agent abuse
-- RAG data exposure
-
-### Impact
-
-Potential intellectual property loss, data exposure, service disruption, and reputational damage.
+- Unauthorized disclosure
+- Intellectual property theft
+- Credential exposure
+- Data leakage
+- Security compromise
+- Business disruption
 
 ### Severity
 
@@ -661,15 +681,89 @@ Potential intellectual property loss, data exposure, service disruption, and rep
 
 ---
 
-# 20. Finding 06 — Continuous Security Awareness
+## 15.6 AF-006 — Organizational Security Maturity
 
 ### Description
 
-The organization requires continuous improvement of security awareness and the ability of employees to recognize evolving threats.
+The organization maintains a strong security foundation, but its security maturity must continue to develop as the company grows.
+
+Growth in employees, customers, infrastructure, services, AI capabilities, and geographic operations can increase the complexity of security governance.
 
 ### Risk
 
-Threat techniques evolve continuously, meaning one-time security training is insufficient.
+If security maturity does not scale with organizational growth, the organization may experience:
+
+- Control gaps
+- Inconsistent security practices
+- Increased attack surface
+- Access-management challenges
+- Governance gaps
+- Compliance challenges
+
+### Severity
+
+**Medium**
+
+### NIST CSF 2.0 Mapping
+
+**Govern / Identify**
+
+---
+
+## 15.7 AF-007 — AI Model Logic Protection
+
+### Description
+
+AI systems introduce additional risks associated with model behavior, model logic, model integrity, and AI workflows.
+
+AI security controls therefore require continuous assessment and validation.
+
+### Potential Threats
+
+- Model manipulation
+- Model abuse
+- Adversarial attacks
+- Prompt injection
+- AI agent abuse
+- RAG data exposure
+- Model extraction
+
+### Impact
+
+Potential impacts include:
+
+- Intellectual property loss
+- Data exposure
+- Service disruption
+- Unauthorized model behavior
+- Reputational damage
+
+### Severity
+
+**Medium**
+
+### NIST CSF 2.0 Mapping
+
+**Identify / Protect / Detect**
+
+---
+
+## 15.8 AF-008 — Security Awareness
+
+### Description
+
+Security awareness and employee security training require continued improvement to match the organization's size and threat exposure.
+
+### Risk
+
+Insufficient employee awareness may increase susceptibility to:
+
+- Phishing
+- Social engineering
+- Credential theft
+- Insider threats
+- Unsafe handling of sensitive information
+- Delayed incident reporting
 
 ### Severity
 
@@ -681,24 +775,32 @@ Threat techniques evolve continuously, meaning one-time security training is ins
 
 ---
 
-# 21. Finding 07 — Regulatory and Geographic Complexity
+## 15.9 AF-009 — Security Documentation
 
 ### Description
 
-VORTEX SECURE operates across multiple geographic regions, increasing the complexity of legal and regulatory requirements.
+Security documentation should remain accurate, complete, and synchronized with changes to the organization's architecture, systems, assets, policies, and security controls.
+
+Important documentation includes:
+
+- Asset inventories
+- Network architecture
+- Security policies
+- Security procedures
+- Incident response playbooks
+- Risk registers
+- Access control documentation
+- Business continuity documentation
+- Disaster recovery documentation
+- Audit evidence
 
 ### Risk
 
-Failure to continuously review jurisdiction-specific requirements could result in:
-
-- Regulatory violations
-- Financial penalties
-- Legal consequences
-- Reputational damage
+Outdated or incomplete documentation can reduce operational efficiency and make security assessment, incident response, and recovery more difficult.
 
 ### Severity
 
-**Medium-High**
+**Low**
 
 ### NIST CSF 2.0 Mapping
 
@@ -706,11 +808,41 @@ Failure to continuously review jurisdiction-specific requirements could result i
 
 ---
 
-# 22. Security Strengths
+## 15.10 AF-010 — Security Configuration Improvements
+
+### Description
+
+Security controls depend on correct configuration and continuous review.
+
+The organization should periodically validate configurations across:
+
+- Firewalls
+- Identity systems
+- Endpoints
+- Cloud infrastructure
+- Network security systems
+- Security monitoring platforms
+- AI infrastructure
+
+### Risk
+
+Configuration weaknesses may create unnecessary exposure or reduce the effectiveness of existing security controls.
+
+### Severity
+
+**Low**
+
+### NIST CSF 2.0 Mapping
+
+**Protect / Detect**
+
+---
+
+# 16. Security Strengths
 
 The assessment identified several significant strengths.
 
-### 22.1 Security Technology
+## 16.1 Security Technology
 
 The organization uses a broad range of modern security technologies, including:
 
@@ -725,7 +857,7 @@ The organization uses a broad range of modern security technologies, including:
 - PAM
 - MFA
 
-### 22.2 Security Operations
+## 16.2 Security Operations
 
 Specialized teams support:
 
@@ -735,7 +867,7 @@ Specialized teams support:
 - Incident Response
 - Digital Forensics
 
-### 22.3 Continuous Auditing
+## 16.3 Continuous Auditing
 
 The organization recognizes that cybersecurity risk cannot be reduced to zero permanently.
 
@@ -747,28 +879,86 @@ Continuous auditing allows security teams to:
 - Improve security
 - Adapt to emerging threats
 
-### 22.4 AI Security Awareness
+## 16.4 AI Security Awareness
 
 The organization recognizes AI-specific security risks and maintains dedicated AI security capabilities.
 
-### 22.5 Compliance Awareness
+## 16.5 Compliance Awareness
 
 The organization demonstrates awareness of the importance of regulatory compliance and continuous review of legal requirements.
 
 ---
 
-# 23. Security Recommendations
+# 17. Security Recommendations
 
-## Recommendation 01 — Strengthen Password Security
+The recommendations below are designed to address the formal audit findings and support continuous security improvement.
+
+## Recommendation 01 — Protect Sensitive Customer Data
+
+Strengthen protection of sensitive customer information through:
+
+- Data classification
+- Strong access control
+- Least privilege
+- Encryption
+- DLP
+- Security monitoring
+- Access reviews
+- Data lifecycle management
+- Secure disposal
+
+### Priority
+
+**Critical**
+
+### Related Findings
+
+**AF-001**
+
+### NIST CSF 2.0
+
+**Identify / Protect / Detect**
+
+---
+
+## Recommendation 02 — Protect AI Intellectual Property
+
+Strengthen protection of:
+
+- Foundation Models
+- Fine-tuned Models
+- Model Weights
+- Training Datasets
+- AI research
+- AI source code
+- AI infrastructure
+
+Controls should include strong access control, monitoring, encryption, model protection, secure deployment, and AI-specific testing.
+
+### Priority
+
+**Critical**
+
+### Related Findings
+
+**AF-002**
+
+### NIST CSF 2.0
+
+**Identify / Protect / Detect**
+
+---
+
+## Recommendation 03 — Strengthen Password Security
 
 Implement a stronger enterprise password policy covering:
 
-- Password complexity
 - Password length
 - Credential protection
-- Account lockout
-- Credential monitoring
 - Privileged account requirements
+- Credential monitoring
+- Authentication security
+- Password-policy enforcement
 
 MFA should remain mandatory for sensitive and privileged systems.
 
@@ -776,13 +966,17 @@ MFA should remain mandatory for sensitive and privileged systems.
 
 **High**
 
+### Related Findings
+
+**AF-003**
+
 ### NIST CSF 2.0
 
 **Protect**
 
 ---
 
-## Recommendation 02 — Strengthen Third-Party Security
+## Recommendation 04 — Strengthen Third-Party Security
 
 Implement stronger third-party risk management controls including:
 
@@ -794,10 +988,15 @@ Implement stronger third-party risk management controls including:
 - Least privilege
 - MFA
 - Network segmentation
+- Security due diligence
 
 ### Priority
 
 **High**
+
+### Related Findings
+
+**AF-004**
 
 ### NIST CSF 2.0
 
@@ -805,47 +1004,27 @@ Implement stronger third-party risk management controls including:
 
 ---
 
-## Recommendation 03 — Improve Security Awareness
+## Recommendation 05 — Strengthen Confidential Data Protection
 
-Implement continuous security awareness programs covering:
+Protect confidential information through:
 
-- Phishing
-- Social Engineering
-- Credential Security
-- Data Protection
-- Insider Threats
-- Secure Remote Work
-- AI Security
-
-Training should be mandatory and periodically evaluated.
-
-### Priority
-
-**High**
-
-### NIST CSF 2.0
-
-**Protect**
-
----
-
-## Recommendation 04 — Strengthen AI Security
-
-Expand AI security controls around:
-
-- Training data protection
-- Model integrity
-- Model access
-- AI agent permissions
-- RAG security
-- Model monitoring
-- AI supply-chain security
-- Prompt and input security
-- AI-specific incident response
+- Data classification
+- Encryption
+- Access control
+- DLP
+- Key management
+- Monitoring
+- Secure backup
+- Secure disposal
+- Periodic access reviews
 
 ### Priority
 
 **High**
+
+### Related Findings
+
+**AF-005**
 
 ### NIST CSF 2.0
 
@@ -853,7 +1032,7 @@ Expand AI security controls around:
 
 ---
 
-## Recommendation 05 — Continuous Security Maturity Assessment
+## Recommendation 06 — Improve Organizational Security Maturity
 
 Security maturity should be reassessed periodically as the organization grows.
 
@@ -865,11 +1044,16 @@ Assessment criteria should include:
 - New infrastructure
 - New geographic regions
 - New technologies
+- New AI capabilities
 - New regulatory requirements
 
 ### Priority
 
-**High**
+**Medium**
+
+### Related Findings
+
+**AF-006**
 
 ### NIST CSF 2.0
 
@@ -877,43 +1061,124 @@ Assessment criteria should include:
 
 ---
 
-## Recommendation 06 — Continuous Regulatory Review
+## Recommendation 07 — Strengthen AI Model Security
 
-Maintain continuous monitoring of regulatory and legal requirements across all jurisdictions in which the organization operates.
+Expand AI security controls around:
 
-### Priority
-
-**Medium-High**
-
-### NIST CSF 2.0
-
-**Govern**
-
----
-
-## Recommendation 07 — Incident Response Exercises
-
-Conduct regular Incident Response Exercises involving scenarios such as:
-
-- Ransomware
-- Insider Threat
-- Supply Chain Attack
-- DDoS
-- Credential Compromise
-- AI Model Compromise
-- Data Breach
+- Model integrity
+- Model access
+- Training data protection
+- AI agent permissions
+- RAG security
+- Model monitoring
+- AI supply-chain security
+- Prompt and input security
+- AI-specific incident response
+- Adversarial testing
 
 ### Priority
 
-**High**
+**Medium**
+
+### Related Findings
+
+**AF-007**
 
 ### NIST CSF 2.0
 
-**Respond / Recover**
+**Identify / Protect / Detect**
 
 ---
 
-# 24. Risk Reduction Strategy
+## Recommendation 08 — Improve Security Awareness
+
+Implement continuous security awareness programs covering:
+
+- Phishing
+- Social Engineering
+- Credential Security
+- Data Protection
+- Insider Threats
+- Secure Remote Work
+- AI Security
+- Incident Reporting
+
+Training should be mandatory, measurable, and periodically evaluated.
+
+### Priority
+
+**Medium**
+
+### Related Findings
+
+**AF-008**
+
+### NIST CSF 2.0
+
+**Protect / Detect**
+
+---
+
+## Recommendation 09 — Maintain Security Documentation
+
+Establish continuous documentation review processes covering:
+
+- Asset inventories
+- Network architecture
+- Security policies
+- Security procedures
+- Risk registers
+- Incident response documentation
+- Access control documentation
+- Business continuity
+- Disaster recovery
+- Audit evidence
+
+Documentation should be updated following significant architectural, organizational, or technological changes.
+
+### Priority
+
+**Low**
+
+### Related Findings
+
+**AF-009**
+
+### NIST CSF 2.0
+
+**Govern / Identify**
+
+---
+
+## Recommendation 10 — Improve Security Configuration Validation
+
+Conduct periodic configuration reviews across critical security technologies and infrastructure.
+
+Reviews should include:
+
+- Firewall configurations
+- Identity systems
+- Endpoint security
+- Cloud infrastructure
+- Network security
+- SIEM and monitoring systems
+- AI infrastructure
+
+### Priority
+
+**Low**
+
+### Related Findings
+
+**AF-010**
+
+### NIST CSF 2.0
+
+**Protect / Detect**
+
+---
+
+# 18. Risk Reduction Strategy
 
 The organization should prioritize risk reduction rather than attempting to eliminate risk completely.
 
@@ -932,28 +1197,31 @@ The objective should therefore be:
 
 ---
 
-# 25. Priority Remediation Plan
+# 19. Priority Remediation Plan
 
-| Priority | Area | Action |
-|---|---|---|
-| 1 | Password Security | Strengthen enterprise password policies |
-| 2 | Third-Party Risk | Reduce excessive trust and strengthen vendor controls |
-| 3 | Security Awareness | Improve continuous employee security training |
-| 4 | AI Security | Strengthen AI-specific security controls |
-| 5 | Security Maturity | Scale security governance with organizational growth |
-| 6 | Compliance | Continuously review jurisdiction-specific requirements |
-| 7 | Incident Response | Conduct realistic response exercises |
-| 8 | Access Control | Continuously review permissions and privileged access |
+| Priority | Finding | Area | Primary Action |
+|---:|---|---|---|
+| 1 | AF-001 | Sensitive Customer Data | Strengthen protection of sensitive customer information |
+| 2 | AF-002 | AI Intellectual Property | Strengthen protection of models, datasets, and model weights |
+| 3 | AF-003 | Password Security | Strengthen enterprise password policies |
+| 4 | AF-004 | Third-Party Risk | Strengthen vendor security and access controls |
+| 5 | AF-005 | Confidential Data | Improve confidential data protection |
+| 6 | AF-006 | Security Maturity | Scale security governance with organizational growth |
+| 7 | AF-007 | AI Model Security | Improve AI model and AI workflow protection |
+| 8 | AF-008 | Security Awareness | Improve continuous employee security training |
+| 9 | AF-009 | Documentation | Maintain accurate and current security documentation |
+| 10 | AF-010 | Configuration | Perform periodic security configuration validation |
 
 ---
 
-# 26. NIST CSF 2.0 Improvement Roadmap
+# 20. NIST CSF 2.0 Improvement Roadmap
 
 ## Govern
 
 - Strengthen governance maturity
 - Improve third-party risk management
 - Maintain regulatory awareness
+- Maintain security documentation
 - Align security strategy with business growth
 
 ## Identify
@@ -962,6 +1230,7 @@ The objective should therefore be:
 - Continuously reassess risks
 - Identify new AI and cloud risks
 - Monitor third-party dependencies
+- Maintain visibility into sensitive information and intellectual property
 
 ## Protect
 
@@ -970,6 +1239,8 @@ The objective should therefore be:
 - Enforce least privilege
 - Improve employee security awareness
 - Strengthen AI security controls
+- Improve sensitive-data protection
+- Validate security configurations
 
 ## Detect
 
@@ -978,6 +1249,8 @@ The objective should therefore be:
 - Update IDS/IPS rules
 - Expand AI threat detection
 - Improve security telemetry
+- Monitor sensitive-data access
+- Validate security-control effectiveness
 
 ## Respond
 
@@ -985,6 +1258,7 @@ The objective should therefore be:
 - Conduct Incident Response Exercises
 - Improve escalation processes
 - Test AI incident scenarios
+- Incorporate findings into remediation tracking
 
 ## Recover
 
@@ -996,22 +1270,24 @@ The objective should therefore be:
 
 ---
 
-# 27. Overall Conclusion
+# 21. Overall Conclusion
 
 The security audit concludes that VORTEX SECURE has a **strong overall security foundation** supported by modern security technologies, specialized security teams, continuous auditing, security monitoring, compliance awareness, and layered security architecture.
 
-However, the organization's security maturity requires continued development to remain aligned with its increasing size, customer base, infrastructure, geographic presence, and AI capabilities.
+The assessment identified ten formal findings covering sensitive customer data, AI intellectual property, password security, third-party risk, confidential information, organizational security maturity, AI model security, security awareness, security documentation, and security configuration.
 
-The most important improvements identified are:
+The most significant improvements identified are:
 
+- Protection of sensitive customer information
+- Protection of AI intellectual property
 - Stronger password security policies
 - Improved third-party risk management
-- Increased security awareness
-- Stronger AI security controls
+- Improved confidential data protection
 - Continued security maturity development
-- Continuous regulatory monitoring
-- Regular incident response exercises
-- Continuous access and control reviews
+- Stronger AI model security
+- Increased security awareness
+- Continuous documentation maintenance
+- Continuous security configuration validation
 
 The assessment does not conclude that the organization can eliminate cybersecurity risk entirely.
 
@@ -1021,16 +1297,16 @@ This approach is consistent with the principles of the **NIST Cybersecurity Fram
 
 ---
 
-# 28. Final NIST CSF 2.0 Assessment Summary
+# 22. Final NIST CSF 2.0 Assessment Summary
 
 | NIST CSF 2.0 Function | Overall Assessment | Primary Focus |
 |---|---|---|
-| Govern | Strong with improvement opportunities | Governance, third-party risk, regulatory requirements |
-| Identify | Strong | Asset management, risk identification, AI and infrastructure visibility |
-| Protect | Good | Password policy, awareness, access control, AI protection |
-| Detect | Strong | SIEM, EDR/XDR, threat hunting, monitoring |
-| Respond | Strong | Incident response, escalation, exercises |
-| Recover | Good | Backup, recovery testing, resilience |
+| Govern | Strong with improvement opportunities | Governance, third-party risk, documentation, regulatory requirements |
+| Identify | Strong | Asset management, risk identification, sensitive information, AI and infrastructure visibility |
+| Protect | Good | Data protection, password policy, awareness, access control, AI protection |
+| Detect | Strong | SIEM, EDR/XDR, threat hunting, monitoring, security validation |
+| Respond | Strong | Incident response, escalation, exercises, remediation |
+| Recover | Good | Backup, recovery testing, resilience, lessons learned |
 
 ## Overall Assessment
 
@@ -1038,7 +1314,7 @@ This approach is consistent with the principles of the **NIST Cybersecurity Fram
 
 ---
 
-# 29. Final Auditor Statement
+# 23. Final Auditor Statement
 
 The assessment demonstrates that cybersecurity at VORTEX SECURE is not limited to preventing unauthorized access or responding to individual attacks.
 
@@ -1056,4 +1332,26 @@ Security must evolve alongside the organization.
 
 The long-term objective is therefore not to create an environment where risk is assumed to be zero, but to create an organization capable of continuously identifying, understanding, reducing, monitoring, and responding to cybersecurity risk.
 
+The findings and recommendations documented in this report should be incorporated into future security assessments, risk reviews, architecture changes, security operations activities, remediation tracking, and organizational improvement initiatives.
+
 **NIST Cybersecurity Framework (CSF) 2.0 provides the primary structure for maintaining this continuous security improvement cycle.**
+
+---
+
+# 24. Assessment Disclaimer
+
+VORTEX SECURE is a simulated enterprise environment created for educational and portfolio purposes.
+
+The documentation, assets, architecture, security controls, risks, findings, recommendations, and organizational characteristics represent the assumptions and assessment results of the simulated case study.
+
+This report should not be interpreted as evidence of:
+
+- A real-world security audit
+- ISO/IEC 27001 certification
+- NIST certification
+- Regulatory approval
+- A production penetration test
+- Complete vulnerability discovery
+- Elimination of cybersecurity risk
+
+The project demonstrates the practical application of cybersecurity audit, risk assessment, security control evaluation, governance, and continuous improvement principles using **NIST Cybersecurity Framework (CSF) 2.0** as the primary assessment framework.
