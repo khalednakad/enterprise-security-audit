@@ -127,7 +127,7 @@ Both internal and external attack surfaces are considered within the defined ass
 
 The detailed boundaries and limitations of the assessment are documented in:
 
-`docs/Audit-Scope.md`
+`documentation/Audit-Scope.md`
 
 ---
 
@@ -262,7 +262,7 @@ The assessment identifies multiple categories of critical assets.
 
 The complete asset inventory is documented in:
 
-`docs/Asset-Inventory.md`
+`documentation/Asset-Inventory.md`
 
 ---
 
@@ -350,7 +350,7 @@ Security capabilities include:
 
 The complete security control assessment is documented in:
 
-`docs/Security-Controls.md`
+`documentation/Security-Controls.md`
 
 ---
 
@@ -396,7 +396,7 @@ The enterprise risk register includes risks such as:
 
 The complete risk assessment is documented in:
 
-`docs/Risk-Assessment.md`
+`documentation/Risk-Assessment.md`
 
 ---
 
@@ -432,7 +432,7 @@ The findings focus on areas including:
 
 The detailed findings are documented in:
 
-`docs/Audit-Findings.md`
+`documentation/Audit-Findings.md`
 
 ---
 
@@ -460,7 +460,7 @@ Priority improvement areas include:
 
 Detailed recommendations are documented in:
 
-`docs/Recommendations.md`
+`documentation/Recommendations.md`
 
 ---
 
@@ -625,7 +625,7 @@ The assessment demonstrates several important security principles:
 
 The detailed lessons learned are documented in:
 
-`docs/Lessons-Learned.md`
+`documentation/Lessons-Learned.md`
 
 ---
 
@@ -634,7 +634,7 @@ The detailed lessons learned are documented in:
 The project documentation is organized as follows:
 
 ```text
-docs/
+documentation/
 ├── Asset-Inventory.md
 ├── Audit-Findings.md
 ├── Audit-Scope.md
