@@ -4,7 +4,7 @@
 
 This document provides strategic, technical, and operational recommendations based on the findings identified during the security audit of VORTEX SECURE.
 
-The primary objective is to reduce identified cybersecurity risks, strengthen security controls, improve organizational security maturity, protect critical business and AI assets, support regulatory and legal requirements, and establish a continuous security improvement process.
+The primary objectives are to reduce identified cybersecurity risks, strengthen security controls, improve organizational security maturity, protect critical business and AI assets, support applicable regulatory and legal requirements, and establish a continuous security improvement process.
 
 The recommendations are primarily aligned with the **NIST Cybersecurity Framework (CSF) 2.0** and are directly derived from the findings documented in `Audit-Findings.md`.
 
@@ -12,14 +12,14 @@ The recommendations are primarily aligned with the **NIST Cybersecurity Framewor
 
 # Recommendation Strategy
 
-The recommendations are prioritized according to the potential business impact, risk severity, and urgency of the identified findings.
+Recommendations are prioritized according to risk severity, potential business impact, and remediation urgency.
 
-| Priority | Timeline | Primary Objective |
+| Priority | Recommended Timeline | Primary Objective |
 |---|---|---|
-| Critical | 0–30 Days | Reduce exposure of sensitive data and critical AI/IP assets |
+| Critical | 0–30 Days | Reduce exposure of sensitive data and critical AI and intellectual property assets |
 | High | 1–3 Months | Strengthen identity, third-party, data, AI, and governance controls |
 | Medium | 3–6 Months | Improve security awareness, testing, and operational maturity |
-| Long-Term | 6–12 Months | Establish continuous security maturity and scalable security governance |
+| Low | 6–12 Months | Strengthen documentation, configuration validation, and continuous improvement processes |
 
 The timelines represent recommended implementation targets rather than guaranteed remediation deadlines.
 
@@ -31,31 +31,33 @@ The timelines represent recommended implementation targets rather than guarantee
 |---|---|---|---|
 | AF-001 | Sensitive Customer Data Protection | Critical | Strengthen data protection, access control, DLP, encryption, and monitoring |
 | AF-002 | Intellectual Property and AI Asset Protection | Critical | Strengthen protection of AI models, datasets, model weights, and intellectual property |
-| AF-003 | Password Policy Enforcement | High | Establish and enforce a stronger password and authentication policy |
+| AF-003 | Password Policy Enforcement | High | Establish and enforce stronger password and authentication controls |
 | AF-004 | Third-Party Risk Management | High | Strengthen third-party assessment, monitoring, and access controls |
 | AF-005 | Confidential Information Protection | High | Improve classification, access control, encryption, and DLP |
-| AF-006 | Security Maturity and Organizational Growth | High | Establish measurable security maturity and continuous governance |
-| AF-007 | AI Model Logic and Manipulation Risk | High | Expand AI security testing, monitoring, and red-team activities |
+| AF-006 | Security Maturity and Organizational Growth | Medium | Establish measurable security maturity objectives and continuous governance |
+| AF-007 | AI Model Logic and Manipulation Risk | Medium | Expand AI security testing, monitoring, and red-team activities |
 | AF-008 | Security Awareness and Employee Training | Medium | Establish continuous security awareness and role-based training |
+| AF-009 | Security Documentation | Low | Maintain accurate and current security documentation |
+| AF-010 | Security Configuration Improvements | Low | Perform periodic security configuration validation |
 
 ---
 
 # Critical Priority Recommendations
 
-## AF-001 – Sensitive Customer Data Protection
+## AF-001 — Sensitive Customer Data Protection
 
 **Priority:** Critical
 
-**NIST CSF 2.0 Function:** Protect
+**NIST CSF 2.0 Functions:** Identify / Protect / Detect
 
 ### Recommended Actions
 
 - Strengthen classification of PII and SPII.
-- Review all access permissions to sensitive customer information.
+- Review access permissions to sensitive customer information.
 - Apply least-privilege principles.
 - Strengthen Data Loss Prevention (DLP) controls.
 - Encrypt sensitive information at rest and in transit.
-- Implement continuous monitoring of sensitive data access.
+- Implement continuous monitoring of sensitive-data access.
 - Perform regular access reviews.
 - Monitor unusual data access and transfer behavior.
 - Conduct periodic data protection assessments.
@@ -67,11 +69,11 @@ These actions should reduce the likelihood of unauthorized access, disclosure, o
 
 ---
 
-## AF-002 – Intellectual Property and AI Asset Protection
+## AF-002 — Intellectual Property and AI Asset Protection
 
 **Priority:** Critical
 
-**NIST CSF 2.0 Function:** Protect
+**NIST CSF 2.0 Functions:** Identify / Protect / Detect
 
 ### Recommended Actions
 
@@ -95,7 +97,7 @@ These actions should reduce the likelihood of intellectual property theft, AI as
 
 # High Priority Recommendations
 
-## AF-003 – Password Policy Enforcement
+## AF-003 — Password Policy Enforcement
 
 **Priority:** High
 
@@ -105,8 +107,8 @@ These actions should reduce the likelihood of intellectual property theft, AI as
 
 - Establish a formal and sufficiently strong password policy.
 - Define appropriate minimum password length requirements.
-- Prevent password reuse where appropriate.
-- Monitor authentication failures.
+- Prevent inappropriate password reuse.
+- Monitor authentication failures and suspicious authentication activity.
 - Strengthen MFA coverage.
 - Apply stronger authentication requirements to privileged accounts.
 - Review authentication policies periodically.
@@ -118,11 +120,11 @@ The organization should reduce the risk of credential compromise, password reuse
 
 ---
 
-## AF-004 – Third-Party Risk Management
+## AF-004 — Third-Party Risk Management
 
 **Priority:** High
 
-**NIST CSF 2.0 Function:** Govern
+**NIST CSF 2.0 Functions:** Govern / Identify / Protect
 
 ### Recommended Actions
 
@@ -143,11 +145,11 @@ These actions should reduce supply-chain risk and prevent excessive trust in ext
 
 ---
 
-## AF-005 – Confidential Information Protection
+## AF-005 — Confidential Information Protection
 
 **Priority:** High
 
-**NIST CSF 2.0 Function:** Protect
+**NIST CSF 2.0 Functions:** Identify / Protect / Detect
 
 ### Recommended Actions
 
@@ -168,11 +170,13 @@ The organization should reduce the likelihood of unauthorized disclosure, modifi
 
 ---
 
-## AF-006 – Security Maturity and Organizational Growth
+# Medium Priority Recommendations
 
-**Priority:** High
+## AF-006 — Security Maturity and Organizational Growth
 
-**NIST CSF 2.0 Function:** Govern
+**Priority:** Medium
+
+**NIST CSF 2.0 Functions:** Govern / Identify
 
 ### Recommended Actions
 
@@ -194,11 +198,11 @@ The organization should be able to maintain an appropriate level of security mat
 
 ---
 
-## AF-007 – AI Model Logic and Manipulation Risk
+## AF-007 — AI Model Logic and Manipulation Risk
 
-**Priority:** High
+**Priority:** Medium
 
-**NIST CSF 2.0 Functions:** Identify, Protect, Detect, Respond
+**NIST CSF 2.0 Functions:** Identify / Protect / Detect / Respond
 
 ### Recommended Actions
 
@@ -222,21 +226,19 @@ These actions should reduce the risk of AI model manipulation, unauthorized AI b
 
 ---
 
-# Medium Priority Recommendations
-
-## AF-008 – Security Awareness and Employee Training
+## AF-008 — Security Awareness and Employee Training
 
 **Priority:** Medium
 
-**NIST CSF 2.0 Function:** Protect
+**NIST CSF 2.0 Functions:** Protect / Detect
 
 ### Recommended Actions
 
 - Establish mandatory security awareness training.
 - Conduct regular phishing simulations.
 - Provide role-based security training.
-- Introduce dedicated AI Security Training.
-- Conduct Incident Response Exercises.
+- Introduce dedicated AI security training.
+- Conduct incident response exercises.
 - Train employees on secure data handling.
 - Provide social engineering awareness training.
 - Train employees on incident reporting procedures.
@@ -250,11 +252,13 @@ The organization should reduce human-related security risks and improve employee
 
 ---
 
-## AF-009 – Maintain Security Documentation
+# Low Priority Recommendations
 
-Priority: Low
+## AF-009 — Security Documentation
 
-NIST CSF 2.0 Function: Govern / Identify
+**Priority:** Low
+
+**NIST CSF 2.0 Functions:** Govern / Identify
 
 ### Recommended Actions
 
@@ -275,11 +279,11 @@ The organization should maintain accurate and current security documentation tha
 
 ---
 
-## AF-010 – Improve Security Configuration Validation
+## AF-010 — Improve Security Configuration Validation
 
-Priority: Low
+**Priority:** Low
 
-NIST CSF 2.0 Function: Protect / Detect
+**NIST CSF 2.0 Functions:** Protect / Detect
 
 ### Recommended Actions
 
@@ -305,7 +309,7 @@ The organization should reduce unnecessary exposure and improve the effectivenes
 
 # Identity and Access Management Improvements
 
-In addition to the finding-specific recommendations, VORTEX SECURE should continuously strengthen Identity and Access Management.
+In addition to the finding-specific recommendations, VORTEX SECURE should continuously strengthen Identity and Access Management (IAM).
 
 Recommended actions include:
 
@@ -391,8 +395,8 @@ VORTEX SECURE should:
 - Continue attracting qualified cybersecurity professionals.
 - Develop existing security personnel.
 - Provide specialized technical training.
-- Provide AI Security Training.
-- Conduct regular Incident Response Exercises.
+- Provide AI security training.
+- Conduct regular incident response exercises.
 - Encourage collaboration between security teams.
 - Promote knowledge sharing.
 - Encourage continuous professional development.
@@ -468,7 +472,7 @@ The organization should use continuous auditing, monitoring, training, remediati
 
 # NIST CSF 2.0 Recommendation Alignment
 
-The recommendations support all six functions of the NIST CSF 2.0.
+The recommendations support all six Functions of the NIST CSF 2.0.
 
 | NIST CSF 2.0 Function | Key Recommendations |
 |---|---|
@@ -483,19 +487,19 @@ The recommendations support all six functions of the NIST CSF 2.0.
 
 # Recommendation Implementation Priorities
 
-The recommended implementation sequence is:
+The recommended implementation sequence is divided into four phases.
 
-### Phase 1 – Immediate Risk Reduction
+## Phase 1 — Immediate Risk Reduction
 
 **0–30 Days**
 
-- Address sensitive data protection risks.
+- Address sensitive-data protection risks.
 - Strengthen protection of critical AI and intellectual property assets.
 - Begin formal password policy remediation.
 - Review critical access permissions.
 - Review high-risk third-party relationships.
 
-### Phase 2 – Control Strengthening
+## Phase 2 — Control Strengthening
 
 **1–3 Months**
 
@@ -506,7 +510,7 @@ The recommended implementation sequence is:
 - Improve identity and access management.
 - Review network security configurations.
 
-### Phase 3 – Security Maturity Improvement
+## Phase 3 — Security Maturity Improvement
 
 **3–6 Months**
 
@@ -518,7 +522,7 @@ The recommended implementation sequence is:
 - Expand threat hunting.
 - Improve security governance.
 
-### Phase 4 – Long-Term Security Development
+## Phase 4 — Long-Term Security Development
 
 **6–12 Months**
 
@@ -556,7 +560,7 @@ The recommendations identified in this document are intended to support the cont
 
 The organization already possesses a strong foundational security environment. The primary objective is therefore not simply to deploy additional security technologies, but to improve the effectiveness, governance, monitoring, testing, and continuous development of existing security capabilities.
 
-VORTEX SECURE should prioritize the remediation of critical and high-risk findings while simultaneously developing a long-term security maturity strategy.
+VORTEX SECURE should prioritize remediation of critical and high-risk findings while simultaneously developing a long-term security maturity strategy.
 
 The continued application of the **NIST Cybersecurity Framework (CSF) 2.0** provides the organization with a structured approach for governing cybersecurity risk, identifying threats and vulnerabilities, protecting critical assets, detecting security events, responding to incidents, and recovering from disruptive events.
 
