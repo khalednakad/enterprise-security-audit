@@ -250,6 +250,59 @@ The organization should reduce human-related security risks and improve employee
 
 ---
 
+## AF-009 – Maintain Security Documentation
+
+Priority: Low
+
+NIST CSF 2.0 Function: Govern / Identify
+
+### Recommended Actions
+
+- Review asset inventories periodically.
+- Maintain current network architecture documentation.
+- Review security policies and procedures regularly.
+- Maintain current incident response playbooks.
+- Update risk registers following significant changes.
+- Maintain current access control documentation.
+- Review business continuity documentation.
+- Review disaster recovery documentation.
+- Maintain appropriate audit evidence.
+- Update documentation following significant organizational, architectural, or technological changes.
+
+### Expected Outcome
+
+The organization should maintain accurate and current security documentation that supports effective governance, risk management, incident response, recovery, and future security assessments.
+
+---
+
+## AF-010 – Improve Security Configuration Validation
+
+Priority: Low
+
+NIST CSF 2.0 Function: Protect / Detect
+
+### Recommended Actions
+
+Conduct periodic configuration reviews across critical security technologies and infrastructure.
+
+Reviews should include:
+
+- Firewall configurations
+- Identity systems
+- Endpoint security
+- Cloud infrastructure
+- Network security
+- SIEM and monitoring systems
+- AI infrastructure
+
+Configuration reviews should identify weaknesses, document remediation requirements, validate corrective actions, and track remaining risk.
+
+### Expected Outcome
+
+The organization should reduce unnecessary exposure and improve the effectiveness and reliability of existing security controls through continuous configuration validation.
+
+---
+
 # Identity and Access Management Improvements
 
 In addition to the finding-specific recommendations, VORTEX SECURE should continuously strengthen Identity and Access Management.
