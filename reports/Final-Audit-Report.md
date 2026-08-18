@@ -1049,7 +1049,7 @@ Assessment criteria should include:
 
 ### Priority
 
-**Medium**
+**High**
 
 ### Related Findings
 
@@ -1078,7 +1078,7 @@ Expand AI security controls around:
 
 ### Priority
 
-**Medium**
+**High**
 
 ### Related Findings
 
