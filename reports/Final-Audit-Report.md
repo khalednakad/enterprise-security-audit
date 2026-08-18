@@ -537,7 +537,7 @@ The findings below represent the consolidated audit findings documented in the p
 
 ---
 
-## 15.1 AF-001 — Sensitive Customer Data Exposure
+## 15.1 AF-001 — Sensitive Customer Data Protection
 
 ### Description
 
@@ -702,7 +702,7 @@ If security maturity does not scale with organizational growth, the organization
 
 ### Severity
 
-**Medium**
+**High**
 
 ### NIST CSF 2.0 Mapping
 
@@ -740,7 +740,7 @@ Potential impacts include:
 
 ### Severity
 
-**Medium**
+**High**
 
 ### NIST CSF 2.0 Mapping
 
