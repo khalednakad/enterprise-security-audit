@@ -49,6 +49,33 @@ These supporting standards provide additional security control and risk-manageme
 
 ---
 
+## Risk Rating and Audit Finding Severity
+
+Risk ratings in this document represent the organization's assessed cybersecurity risk based on the relationship between likelihood and impact.
+
+Audit finding severity represents the significance of a control weakness, gap, or security issue identified during the security audit.
+
+These two classifications are related but are not required to be identical.
+
+A finding may therefore have a different severity from the risk rating of a related risk because the two classifications serve different purposes:
+
+- **Risk Rating:** Evaluates the overall level of cybersecurity risk based primarily on likelihood and impact, while considering existing controls and exposure.
+- **Audit Finding Severity:** Evaluates the significance and priority of a specific control weakness or audit observation identified during the assessment.
+
+For example, a risk may be rated **Critical** because its combination of likelihood, impact, and exposure produces a Critical rating in the risk matrix, while the corresponding audit finding may be classified as **High** because the finding represents a significant control weakness that requires remediation but does not itself define the complete enterprise risk.
+
+Therefore, differences between related risk ratings and audit finding severities should not be interpreted as inconsistencies.
+
+The risk register and audit findings register should be considered complementary:
+
+**Risk Register → Enterprise Risk Level**
+
+**Audit Findings → Control Weakness / Finding Severity**
+
+Both should be tracked through remediation, validation, monitoring, and periodic reassessment.
+
+---
+
 # Risk Rating Scale
 
 | Rating | Description |
