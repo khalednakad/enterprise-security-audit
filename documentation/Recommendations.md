@@ -34,8 +34,8 @@ The timelines represent recommended implementation targets rather than guarantee
 | AF-003 | Password Policy Enforcement | High | Establish and enforce stronger password and authentication controls |
 | AF-004 | Third-Party Risk Management | High | Strengthen third-party assessment, monitoring, and access controls |
 | AF-005 | Confidential Information Protection | High | Improve classification, access control, encryption, and DLP |
-| AF-006 | Security Maturity and Organizational Growth | Medium | Establish measurable security maturity objectives and continuous governance |
-| AF-007 | AI Model Logic and Manipulation Risk | Medium | Expand AI security testing, monitoring, and red-team activities |
+| AF-006 | Security Maturity and Organizational Growth | High | Establish measurable security maturity objectives and continuous governance |
+| AF-007 | AI Model Logic and Manipulation Risk | High | Expand AI security testing, monitoring, and red-team activities |
 | AF-008 | Security Awareness and Employee Training | Medium | Establish continuous security awareness and role-based training |
 | AF-009 | Security Documentation | Low | Maintain accurate and current security documentation |
 | AF-010 | Security Configuration Improvements | Low | Perform periodic security configuration validation |
@@ -174,7 +174,7 @@ The organization should reduce the likelihood of unauthorized disclosure, modifi
 
 ## AF-006 — Security Maturity and Organizational Growth
 
-**Priority:** Medium
+**Priority:** High
 
 **NIST CSF 2.0 Functions:** Govern / Identify
 
@@ -200,7 +200,7 @@ The organization should be able to maintain an appropriate level of security mat
 
 ## AF-007 — AI Model Logic and Manipulation Risk
 
-**Priority:** Medium
+**Priority:** High
 
 **NIST CSF 2.0 Functions:** Identify / Protect / Detect / Respond
 
