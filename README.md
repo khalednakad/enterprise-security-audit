@@ -411,8 +411,8 @@ The assessment identified ten findings across different severity levels.
 | AF-003 | High | Password Policy | Open |
 | AF-004 | High | Third-Party Risk Management | Open |
 | AF-005 | High | Confidential Data Exposure | Open |
-| AF-006 | Medium | Security Maturity | Open |
-| AF-007 | Medium | AI Model Logic Protection | Open |
+| AF-006 | High | Security Maturity | Open |
+| AF-007 | High | AI Model Logic Protection | Open |
 | AF-008 | Medium | Security Awareness | Open |
 | AF-009 | Low | Security Documentation | Open |
 | AF-010 | Low | Security Configuration Improvements | Open |
